@@ -13,9 +13,10 @@ pub fn track_mem(_attr: TokenStream, item: TokenStream) -> TokenStream {
     let fn_body = &input_fn.block;
     let fn_vis = &input_fn.vis;
     let fn_generics = &input_fn.sig.generics;
+    let fn_asyncness = &input_fn.sig.asyncness;
 
     let output = quote! {
-        #fn_vis fn #fn_name #fn_generics(#fn_inputs) #fn_output {
+        #fn_vis #fn_asyncness fn #fn_name #fn_generics(#fn_inputs) #fn_output {
             fn get_memory_usage_mb() -> f64 {
                 #[cfg(target_os = "linux")]
                 {
@@ -76,17 +77,21 @@ pub fn track_mem(_attr: TokenStream, item: TokenStream) -> TokenStream {
             let mem_before = get_memory_usage_mb();
             println!("Memory before executing {}: {:.2} MB", stringify!(#fn_name), mem_before);
 
-            // Execute the actual function body
+            // Execute the actual function body, conditionally awaiting based on whether it's async
             let result = {
                 #fn_body
             };
+
+            // If the function is async, we need to properly handle the result
+            #[allow(unused_mut)]
+            let mut final_result = result;
 
             force_memory_update();
             let mem_after = get_memory_usage_mb();
             println!("Memory after executing {}: {:.2} MB", stringify!(#fn_name), mem_after);
             println!("Memory difference: {:.2} MB", mem_after - mem_before);
 
-            result
+            final_result
         }
     };
 

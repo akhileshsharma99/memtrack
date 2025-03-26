@@ -14,6 +14,7 @@ categories = ["development-tools", "development-tools::debugging"]
 proc-macro = true
 
 [dependencies]
+futures-executor = "0.3.31"
 proc-macro2 = "1.0"
 quote = "1.0"
 syn = { version = "2.0", features = ["full"] }
