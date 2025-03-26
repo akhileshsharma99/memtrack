@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/akhileshsharma99/memtrack/compare/v0.2.0...v0.2.1) (2025-03-26)
+
+
+### Bug Fixes
+
+* removed psutil dep ([b434bb6](https://github.com/akhileshsharma99/memtrack/commit/b434bb6ad55ca5908ad438f7d0b0d52a69c70d85))
+
 ## [0.2.0](https://github.com/akhileshsharma99/memtrack/compare/v0.1.1...v0.2.0) (2025-03-26)
 
 
