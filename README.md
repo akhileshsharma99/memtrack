@@ -12,7 +12,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-memtrack = "0.1.0"
+memtrack = "0.2.0"
 ```
 
 ## Usage
