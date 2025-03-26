@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/akhileshsharma99/memtrack/compare/v0.2.1...v0.3.0) (2025-03-26)
+
+
+### Features
+
+* added async support ([a5f41a6](https://github.com/akhileshsharma99/memtrack/commit/a5f41a6916a7a9087a3332d52b07f6e4a70643e6))
+
 ## [0.2.1](https://github.com/akhileshsharma99/memtrack/compare/v0.2.0...v0.2.1) (2025-03-26)
 
 
