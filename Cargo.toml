@@ -1,0 +1,20 @@
+[package]
+name = "memtrack"
+version = "0.1.0"
+edition = "2021"
+description = "A procedural macro for tracking memory usage of functions"
+license = "MIT"
+repository = "https://github.com/akhileshsharma99/memtrack"
+documentation = "https://docs.rs/memtrack"
+readme = "README.md"
+keywords = ["memory", "tracking", "profiling", "proc-macro"]
+categories = ["development-tools", "debugging"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1.0"
+quote = "1.0"
+syn = { version = "2.0", features = ["full"] }
+psutil = "5.2.0"
