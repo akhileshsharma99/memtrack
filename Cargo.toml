@@ -8,7 +8,7 @@ repository = "https://github.com/akhileshsharma99/memtrack"
 documentation = "https://docs.rs/memtrack"
 readme = "README.md"
 keywords = ["memory", "tracking", "profiling", "proc-macro"]
-categories = ["development-tools", "debugging"]
+categories = ["development-tools", "development-tools::debugging"]
 
 [lib]
 proc-macro = true
