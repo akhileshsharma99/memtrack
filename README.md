@@ -30,3 +30,12 @@ fn allocate_memory() {
 ```
 
 This will print the memory usage before and after the function execution.
+
+## Example
+
+See the [examples/demo.rs](examples/demo.rs) file for a more comprehensive example.
+
+```bash
+cargo run --example demo
+```
+    
